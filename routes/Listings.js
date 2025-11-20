@@ -23,4 +23,20 @@ router.get("/listings", (req, res) => {
   } else res.json(listings);
 });
 
+router.post("/listings/create", (req, res) => {
+  console.log("POST /api/listings/create called", req.body);
+  const { title, price } = req.body;
+  if (!title || !price) {
+    return res.status(400).json({ error: "Title and price are required" });
+  }
+
+  const newListing = {
+    id: listings.length + 1,
+    title,
+    price,
+  };
+  listings.push(newListing);
+  res.status(201).json({ msg: "New listing created", data: newListing });
+});
+
 export default router;
