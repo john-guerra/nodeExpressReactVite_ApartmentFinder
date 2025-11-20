@@ -76,7 +76,7 @@ router.post(
   "/login",
   passport.authenticate("local", {
     successRedirect: "/",
-    failureRedirect: "/about",
+    failureRedirect: "/login?msg='Invalid credentials'",
   })
 );
 

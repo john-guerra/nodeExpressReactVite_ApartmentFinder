@@ -1,5 +1,13 @@
 // In-memory user storage (replace with MongoDB later)
-let users = [];
+let users = [
+  {
+    id: "1763666945288",
+    email: "john@example.com",
+    passwordHash:
+      "$2b$10$Nvh.4Ceur1t3O4i2At6MreGsViVJgu6SWx/GaRrRGrm7OG7gj1YLK",
+    name: "john",
+  },
+];
 
 export const createUser = (user) => {
   const newUser = {

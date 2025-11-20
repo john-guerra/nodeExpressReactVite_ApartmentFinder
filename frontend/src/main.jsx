@@ -10,6 +10,8 @@ import IndexPage from "./pages/IndexPage.jsx";
 
 import AboutPage from "./pages/AboutPage.jsx";
 import BaseTemplate from "./pages/BaseTemplate.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
+import RegisterPage from "./pages/RegisterPage.jsx";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
@@ -20,6 +22,8 @@ root.render(
         <Routes>
           <Route path="/" element={<IndexPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
         </Routes>
       </BrowserRouter>
     </BaseTemplate>
